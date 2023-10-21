@@ -1,4 +1,4 @@
-﻿Imports Mysql.Data.MysqlClient
+﻿Imports MySql.Data.MySqlClient
 Module Module1
     Dim con As New MySqlConnection
     Dim reader As MySqlDataReader
@@ -56,7 +56,7 @@ Module Module1
     End Sub
     Public Sub Search()
         Dim uid As String
-        uid = Form1.txtuid.text
+        uid = Form1.txtuid.Text
         query = "SELECT * FROM student where studID = @uid"
         mysqlcmd = New MySqlCommand(query, con)
         mysqlcmd.Parameters.AddWithValue("@uid", uid)
