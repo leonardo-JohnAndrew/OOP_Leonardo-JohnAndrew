@@ -31,6 +31,8 @@ Partial Class Form1
         Me.txtLname = New System.Windows.Forms.TextBox()
         Me.txtFname = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtuid = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -38,8 +40,7 @@ Partial Class Form1
         Me.txtstudcourse = New System.Windows.Forms.TextBox()
         Me.txtLast = New System.Windows.Forms.TextBox()
         Me.txtFirst = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtuid = New System.Windows.Forms.TextBox()
+        Me.btnDisplay = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -142,6 +143,22 @@ Partial Class Form1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Search Record"
         '
+        'txtuid
+        '
+        Me.txtuid.Location = New System.Drawing.Point(182, 53)
+        Me.txtuid.Name = "txtuid"
+        Me.txtuid.Size = New System.Drawing.Size(100, 22)
+        Me.txtuid.TabIndex = 8
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(45, 60)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(74, 15)
+        Me.Label7.TabIndex = 7
+        Me.Label7.Text = "STUDENT ID"
+        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -206,28 +223,23 @@ Partial Class Form1
         Me.txtFirst.Size = New System.Drawing.Size(100, 22)
         Me.txtFirst.TabIndex = 0
         '
-        'Label7
+        'btnDisplay
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(45, 60)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(74, 15)
-        Me.Label7.TabIndex = 7
-        Me.Label7.Text = "STUDENT ID"
-        '
-        'txtuid
-        '
-        Me.txtuid.Location = New System.Drawing.Point(182, 53)
-        Me.txtuid.Name = "txtuid"
-        Me.txtuid.Size = New System.Drawing.Size(100, 22)
-        Me.txtuid.TabIndex = 8
+        Me.btnDisplay.Font = New System.Drawing.Font("Berlin Sans FB", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDisplay.Location = New System.Drawing.Point(321, 464)
+        Me.btnDisplay.Name = "btnDisplay"
+        Me.btnDisplay.Size = New System.Drawing.Size(267, 44)
+        Me.btnDisplay.TabIndex = 2
+        Me.btnDisplay.Text = "Display With Course"
+        Me.btnDisplay.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Orange
-        Me.ClientSize = New System.Drawing.Size(985, 450)
+        Me.ClientSize = New System.Drawing.Size(985, 559)
+        Me.Controls.Add(Me.btnDisplay)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
@@ -258,4 +270,5 @@ Partial Class Form1
     Friend WithEvents txtFirst As TextBox
     Friend WithEvents txtuid As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents btnDisplay As Button
 End Class

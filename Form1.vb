@@ -9,9 +9,12 @@
     Private Sub btnInsert_Click(sender As Object, e As EventArgs) Handles btnInsert.Click
         SaveRecord()
     End Sub
-
     Private Sub btnSEARCH_Click(sender As Object, e As EventArgs) Handles btnSEARCH.Click
         Search()
+    End Sub
 
+    Private Sub btnDisplay_Click(sender As Object, e As EventArgs) Handles btnDisplay.Click
+        Form2.Show()
+        Me.Hide()
     End Sub
 End Class

@@ -5,6 +5,8 @@ Module Module1
     Dim mysqlcmd As New MySqlCommand
     Dim host, uname, pwd, dbname As String
     Dim query As String
+    Dim dtTable As New DataTable
+    Dim adapter As New MySqlDataAdapter
     Public Sub Connect()
         host = "127.0.0.1"
         dbname = "it2boop"
@@ -73,5 +75,58 @@ Module Module1
             reader.Close()
         End Try
 
+    End Sub
+    Public Sub LoadAllData()
+        query = "Select * From Student"
+        adapter = New MySqlDataAdapter(query, con) 'dISPLAY ALL Data in data grid
+        Try
+            dtTable = New DataTable
+            adapter.Fill(dtTable) ' pass the record from mysql to table
+            With Form2.dgvData
+                .DataSource = dtTable 'set the source of datagridview
+                .AutoResizeColumns()
+            End With
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            con.Close()
+
+        End Try
+    End Sub
+    Public Sub LoadCourse()
+        query = "SELECT Distinct course From student"
+        Try
+            mysqlcmd = New MySqlCommand(query, con)
+            reader = mysqlcmd.ExecuteReader
+            While reader.Read
+                Form2.cboCourse.Items.Add(reader("course").ToString)
+
+            End While
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            con.Close()
+        End Try
+    End Sub
+    Public Sub DisplayData(kurso As String)
+        query = "Select * From Student where course = @kurso"
+        adapter = New MySqlDataAdapter(query, con) 'dISPLAY ALL Data in data grid
+        adapter.SelectCommand.Parameters.AddWithValue("@kurso", kurso)
+
+        Try
+            dtTable = New DataTable
+            adapter.Fill(dtTable) ' pass the record from mysql to table
+            With Form2.dgvData
+                .DataSource = dtTable 'set the source of datagridview
+                .AutoResizeColumns()
+            End With
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            con.Close()
+
+        End Try
     End Sub
 End Module
