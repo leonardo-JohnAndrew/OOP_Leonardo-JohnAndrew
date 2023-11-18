@@ -157,7 +157,7 @@ Module Module1
         End Try
     End Sub
     Public Sub DELETE(stuid As String)
-        query = "DELETE student set studFName = @fname , studLName = @lname, course = @course where studID  = @studID "
+        query = "DELETE student  studFName  , studLName , course  where studID  = @studID "
         Try
             Using CMD As New MySqlCommand(query, con)
                 CMD.Parameters.AddWithValue("@studID", stuid)
