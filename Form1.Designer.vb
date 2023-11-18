@@ -41,6 +41,8 @@ Partial Class Form1
         Me.txtLast = New System.Windows.Forms.TextBox()
         Me.txtFirst = New System.Windows.Forms.TextBox()
         Me.btnDisplay = New System.Windows.Forms.Button()
+        Me.btnupdate = New System.Windows.Forms.Button()
+        Me.btndelete = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -198,47 +200,63 @@ Partial Class Form1
         '
         'txtstudcourse
         '
-        Me.txtstudcourse.Enabled = False
         Me.txtstudcourse.Location = New System.Drawing.Point(182, 175)
         Me.txtstudcourse.Name = "txtstudcourse"
-        Me.txtstudcourse.ReadOnly = True
         Me.txtstudcourse.Size = New System.Drawing.Size(100, 22)
         Me.txtstudcourse.TabIndex = 2
         '
         'txtLast
         '
-        Me.txtLast.Enabled = False
         Me.txtLast.Location = New System.Drawing.Point(182, 128)
         Me.txtLast.Name = "txtLast"
-        Me.txtLast.ReadOnly = True
         Me.txtLast.Size = New System.Drawing.Size(100, 22)
         Me.txtLast.TabIndex = 1
         '
         'txtFirst
         '
-        Me.txtFirst.Enabled = False
         Me.txtFirst.Location = New System.Drawing.Point(182, 88)
         Me.txtFirst.Name = "txtFirst"
-        Me.txtFirst.ReadOnly = True
         Me.txtFirst.Size = New System.Drawing.Size(100, 22)
         Me.txtFirst.TabIndex = 0
         '
         'btnDisplay
         '
         Me.btnDisplay.Font = New System.Drawing.Font("Berlin Sans FB", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDisplay.Location = New System.Drawing.Point(321, 464)
+        Me.btnDisplay.Location = New System.Drawing.Point(315, 566)
         Me.btnDisplay.Name = "btnDisplay"
         Me.btnDisplay.Size = New System.Drawing.Size(267, 44)
         Me.btnDisplay.TabIndex = 2
         Me.btnDisplay.Text = "Display With Course"
         Me.btnDisplay.UseVisualStyleBackColor = True
         '
+        'btnupdate
+        '
+        Me.btnupdate.Font = New System.Drawing.Font("Berlin Sans FB", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnupdate.Location = New System.Drawing.Point(505, 417)
+        Me.btnupdate.Name = "btnupdate"
+        Me.btnupdate.Size = New System.Drawing.Size(165, 39)
+        Me.btnupdate.TabIndex = 3
+        Me.btnupdate.Text = "Update"
+        Me.btnupdate.UseVisualStyleBackColor = True
+        '
+        'btndelete
+        '
+        Me.btndelete.Font = New System.Drawing.Font("Berlin Sans FB", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndelete.Location = New System.Drawing.Point(676, 417)
+        Me.btndelete.Name = "btndelete"
+        Me.btndelete.Size = New System.Drawing.Size(162, 39)
+        Me.btndelete.TabIndex = 4
+        Me.btndelete.Text = "Delete"
+        Me.btndelete.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Orange
-        Me.ClientSize = New System.Drawing.Size(985, 559)
+        Me.ClientSize = New System.Drawing.Size(985, 677)
+        Me.Controls.Add(Me.btndelete)
+        Me.Controls.Add(Me.btnupdate)
         Me.Controls.Add(Me.btnDisplay)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -271,4 +289,6 @@ Partial Class Form1
     Friend WithEvents txtuid As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents btnDisplay As Button
+    Friend WithEvents btnupdate As Button
+    Friend WithEvents btndelete As Button
 End Class
