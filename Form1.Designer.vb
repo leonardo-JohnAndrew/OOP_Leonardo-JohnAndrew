@@ -43,6 +43,8 @@ Partial Class Form1
         Me.btnDisplay = New System.Windows.Forms.Button()
         Me.btnupdate = New System.Windows.Forms.Button()
         Me.btndelete = New System.Windows.Forms.Button()
+        Me.btnprint = New System.Windows.Forms.Button()
+        Me.btnprnt = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -222,9 +224,9 @@ Partial Class Form1
         'btnDisplay
         '
         Me.btnDisplay.Font = New System.Drawing.Font("Berlin Sans FB", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDisplay.Location = New System.Drawing.Point(315, 566)
+        Me.btnDisplay.Location = New System.Drawing.Point(12, 417)
         Me.btnDisplay.Name = "btnDisplay"
-        Me.btnDisplay.Size = New System.Drawing.Size(267, 44)
+        Me.btnDisplay.Size = New System.Drawing.Size(228, 44)
         Me.btnDisplay.TabIndex = 2
         Me.btnDisplay.Text = "Display With Course"
         Me.btnDisplay.UseVisualStyleBackColor = True
@@ -249,19 +251,41 @@ Partial Class Form1
         Me.btndelete.Text = "Delete"
         Me.btndelete.UseVisualStyleBackColor = True
         '
+        'btnprint
+        '
+        Me.btnprint.Font = New System.Drawing.Font("Berlin Sans FB", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnprint.Location = New System.Drawing.Point(246, 417)
+        Me.btnprint.Name = "btnprint"
+        Me.btnprint.Size = New System.Drawing.Size(209, 44)
+        Me.btnprint.TabIndex = 5
+        Me.btnprint.Text = "Print Master List"
+        Me.btnprint.UseVisualStyleBackColor = True
+        '
+        'btnprnt
+        '
+        Me.btnprnt.Font = New System.Drawing.Font("Berlin Sans FB", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnprnt.Location = New System.Drawing.Point(673, 462)
+        Me.btnprnt.Name = "btnprnt"
+        Me.btnprnt.Size = New System.Drawing.Size(165, 39)
+        Me.btnprnt.TabIndex = 6
+        Me.btnprnt.Text = "Print"
+        Me.btnprnt.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Orange
-        Me.ClientSize = New System.Drawing.Size(985, 677)
+        Me.ClientSize = New System.Drawing.Size(985, 601)
+        Me.Controls.Add(Me.btnprnt)
+        Me.Controls.Add(Me.btnprint)
         Me.Controls.Add(Me.btndelete)
         Me.Controls.Add(Me.btnupdate)
         Me.Controls.Add(Me.btnDisplay)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = " "
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -291,4 +315,6 @@ Partial Class Form1
     Friend WithEvents btnDisplay As Button
     Friend WithEvents btnupdate As Button
     Friend WithEvents btndelete As Button
+    Friend WithEvents btnprint As Button
+    Friend WithEvents btnprnt As Button
 End Class

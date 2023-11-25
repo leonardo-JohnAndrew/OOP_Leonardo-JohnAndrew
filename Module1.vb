@@ -71,6 +71,7 @@ Module Module1
                 Form1.txtFirst.Enabled = True
                 Form1.txtLast.Enabled = True
                 Form1.txtstudcourse.Enabled = True
+                Form1.btnprnt.Enabled = True
             Else
                 MsgBox("Not Found!")
             End If
